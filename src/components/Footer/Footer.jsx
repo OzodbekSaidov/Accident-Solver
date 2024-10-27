@@ -9,7 +9,7 @@ const FooterContainer = styled.div`
   width: 100%;
   z-index: 1000;
   color: #ffffff;
-  background-color: blue;
+  /* background-color: blue; */
 `;
 
 const Footer = ({ theme }) => {

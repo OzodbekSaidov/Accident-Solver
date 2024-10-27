@@ -5,56 +5,28 @@ import { toast } from "react-toastify";
 import { cookieData } from "../../../utils/cookies";
 import * as ROUTES from "../../../constants/routes";
 import { parol } from "./emails";
+import "./Login.css"
 
 // Styled Components
-const LoginFormContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  padding: 30px;
-  width: 25vw;
-  height: 35vh;
-  color: ${({ theme }) => theme.color};
-  border-radius: 3rem;
-  background-color: ${({ theme }) => theme.primary};
-  box-shadow: 60px -16px rgba(149, 185, 228, 0.8);
-`;
+const LoginFormContainer = styled.div``;
 const Login = styled.div``;
 const LoginFormTitle = styled.h2`
   margin-bottom: 20px;
   margin-left: 2.6rem;
 `;
 const LoginFormInput = styled.input`
-  padding: 10px;
-  border-radius: 2rem;
-  margin-left: 10%;
+
   margin-bottom: 20px;
-  width: 70%;
+  width: 85%;
   font-size: 16px;
-  color: ${({ theme }) => theme.color};
-  background-color: ${({ theme }) => theme.primary};
-  box-shadow: 14px -9px teal;
 `;
 const LoginFormButton = styled.button`
   cursor: pointer;
-  margin-left: 10%;
-  width: 6rem;
-  height: 2.5rem;
   border: none;
-  border-radius: 2rem;
   color: white;
-  background-color: rgb(76, 175, 80);
-  box-shadow: 14px -9px teal;
-  &:hover {
-    transition: 0.3s;
-    background-color: rgb(62, 142, 65);
-  }
 `;
 const PhoneNum = styled.h4`
   cursor: pointer;
-  &&:hover {
-    text-decoration: underline;
-  }
 `;
 const RegisterType = styled.div`
   display: flex;
@@ -65,44 +37,20 @@ const Number = styled("h1")`
   bottom: 46%;
 `;
 const PhoneInput = styled.input`
-  position: relative;
-  top: 10%;
-  left: 10%;
   padding: 10px;
-  border-radius: 2rem;
-  margin-left: 10%;
   margin-bottom: 20px;
-  width: 65%;
+  width: 80%;
   font-size: 20px;
-  color: ${({ theme }) => theme.color};
-  background-color: ${({ theme }) => theme.primary};
-  box-shadow: 14px -9px teal;
+
 `;
 const LoginPhone = styled.div``;
 const LoginPhoneButton = styled.button`
-  position: relative;
-  top: 3rem;
-  left: 2.5rem;
   cursor: pointer;
-  width: 6rem;
-  height: 2.5rem;
   border: none;
-  border-radius: 2rem;
   color: white;
-  background-color: rgb(76, 175, 80);
-  box-shadow: 14px -9px teal;
-  &:hover {
-    transition: 0.3s;
-    background-color: rgb(62, 142, 65);
-  }
 `;
 const Email = styled.h4`
-  position: relative;
-  left: 12rem;
-  cursor: pointer;
-  &&:hover {
-    text-decoration: underline;
-  }
+
 `;
 
 // Main Component
@@ -162,43 +110,44 @@ const LoginForm = () => {
   //     setPhoneNumber(storedPhoneNumber);
   //   }
   // }, []);
-
   return (
-    <LoginFormContainer>
+    <LoginFormContainer className="LoginContainer">
       {formState === 0 ? (
         <Login>
-          <LoginFormTitle>Login</LoginFormTitle>
+          <LoginFormTitle className="Login">SIGN UP</LoginFormTitle>
           <form onSubmit={handleSubmit}>
             <LoginFormInput
               type="text"
+              className="LoginInput"
               placeholder="Username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <LoginFormInput
               type="password"
-              placeholder="Password"
+              className="LoginInput"
+              placeholder="Password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <RegisterType>
-              <LoginFormButton type="submit">Login</LoginFormButton>
-              <PhoneNum onClick={FormChange}>Continue with ph. number</PhoneNum>
+              <LoginFormButton className="LoginButton" type="submit">Login</LoginFormButton>
+              <PhoneNum className="PhoneNum" onClick={FormChange}>Continue with phone number</PhoneNum>
             </RegisterType>
           </form>
         </Login>
       ) : (
         <LoginPhone>
-            <LoginFormTitle>Login</LoginFormTitle>
+            <LoginFormTitle className="LoginTitle">LOGIN</LoginFormTitle>
           <PhoneInput
-            value={PhoneNumber}
+            className="PhoneInput"
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="Enter phone number"
             type="text"
+
             />
-          <LoginPhoneButton type="submit" onClick={handleSubmit}>Login</LoginPhoneButton>
-          <Email onClick={FormChange}>Continue with email</Email>
-          <Number>+998</Number>
+          <LoginPhoneButton className="LoginPhonee" type="submit" onClick={handleSubmit}>Login</LoginPhoneButton>
+          <Email className="EmailText" onClick={FormChange}>Continue with email</Email>
         </LoginPhone>
       )}
     </LoginFormContainer>

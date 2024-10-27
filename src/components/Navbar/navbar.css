@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+.navbar{
+    margin: auto;
+    margin-top: 30px;
+    width: 95%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(81, 99, 239);
+    border-radius: 10px;
+    
+}
+.logo img{
+    width: 140px;
+    height: 80px;
+    cursor: pointer;
+}
+.kategoria ul{
+    display: flex;
+}
+.kategoria ul li{
+    margin: 30px;
+    list-style: none;
+    color: #fff;
+    cursor: pointer;
+}
+.sorch{
+    margin-left: 15px;
+    margin-right: 5px;
+    height: 25px;
+    border: none;
+    border-radius: 3px;
+}
+.battn button{
+    width: 90px;
+    height: 30px;
+    border: none;
+    background-color: rgb(26, 26, 86);
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 45px;
+    cursor: pointer;
+}
+.battn{
+    margin-left: -100px;
+}
+.knopka:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+}
+.kategoria ul li:hover{
+    color: #000;
+    transition: 0.5s;
+    opacity: 0.5;
+}

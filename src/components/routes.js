@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import NotFoundPage from "./Not Found/Not_Found";
+import NotFoundPage from "./Not Found/Not_Found.jsx";
 
 const RoutesContainer = ({ theme, routes, toggleTheme }) => {
   return (

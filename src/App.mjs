@@ -1,7 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
-import RoutesContainer from "./components/routes";
+import RoutesContainer from "./components/routes.js";
 import "leaflet/dist/leaflet.css";
-import { LightMode, DarkMode } from "./constants/theme";
+import { LightMode, DarkMode } from "./constants/theme.js";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
